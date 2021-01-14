@@ -1,0 +1,10 @@
+body {
+    font-family: Verdana,Arial,sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+header {
+    width: 100%;
+    background-color: lightcyan;
+    padding: 15px;
+}
