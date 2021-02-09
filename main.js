@@ -7,5 +7,5 @@ const links = [
         label: "Portfolio Exercise",
         path: "exercises/portfolio_exercise.html"
     }
-]
+];
 
