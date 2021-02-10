@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    This document was a team activity for a class.-->
+<!--    Written by Nathan Spotten, Anna Astle, and Ibrahim Kamara-->
+    <title>Week 2 Team Activity</title>
+    <script>
+        function oneOperandOperation(resultFunc) {
+            let x = document.getElementById("inputNum1").value;
+            if (!isNaN(x)) {
+                let resultString = "Result: " + resultFunc(parseInt(x));
+                document.getElementById("resultDiv").innerHTML = resultString;
+            }
+        }
+
+        function twoOperandOperation(resultFunc) {
+            let x = document.getElementById("inputNum1").value;
+            let y = document.getElementById("inputNum2").value;
+            if (!isNaN(x) && !isNaN(y)) {
+                let resultString = "Result: " + resultFunc(parseInt(x), parseInt(y));
+                document.getElementById("resultDiv").innerHTML = resultString;
+            }
+        }
+        // three different methods of declaring functions are demonstrated
+        const add = (x, y) => x + y;
+        const subtract = function (x, y) {
+            return x - y;
+        };
+        function multiply(x, y) {
+            return x * y;
+        }
+        const nthTriangleNumber = n => (n * (n + 1)) / 2;
+
+    </script>
+</head>
+<body>
+<h1>Simple Calculator</h1>
+<label for="inputNum1">x:</label>
+<input id="inputNum1" type="text">
+<label for="inputNum2">y:</label>
+<input id="inputNum2" type="text">
+<br>
+<button onclick="oneOperandOperation(nthTriangleNumber)">nth triangle number</button>
+<button onclick="twoOperandOperation(add)">+</button>
+<button onclick="twoOperandOperation(subtract)">-</button>
+<button onclick="twoOperandOperation(multiply)">x</button>
+<div id="resultDiv"></div>
+</body>
+</html>
