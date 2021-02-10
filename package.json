@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Nathan Spotten's Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spottenn/portfolio.git"
+  },
+  "author": "Nathan Spotten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spottenn/portfolio/issues"
+  },
+  "homepage": "https://github.com/spottenn/portfolio#readme",
+  "devDependencies": {
+    "eslint": "^7.19.0"
+  }
+}

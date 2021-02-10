@@ -30,13 +30,13 @@
 </head>
 <body>
 <h1>Story Editor</h1><br/>
-<span>Story Name: </span>
-<input id="name_input"/><br/>
+<label for="name_input">Story Name: </label><input id="name_input"/><br/>
 <section>
     <button onclick="loadStory()">Find and Edit</button>
     <button onclick="saveStory()">Save</button>
     <button onclick="displayStory()">Display</button>
-</section>
+</section><br>
+<label for="story_editor">Story:</label><br>
 <textarea id="story_editor" placeholder="Write a totally rad story here!"></textarea>
 <section id="story_display"></section>
 </body>

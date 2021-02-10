@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    This document was a team activity for a class.-->
-<!--    Written by Nathan Spotten, Anna Astle, and Ibrahim Kamara-->
+    <!--    This document was a team activity for a class.-->
+    <!--    Written by Nathan Spotten, Anna Astle, and Ibrahim Kamara-->
     <title>Week 2 Team Activity</title>
     <script>
         function oneOperandOperation(resultFunc) {
             let x = document.getElementById("inputNum1").value;
             if (!isNaN(x)) {
-                let resultString = "Result: " + resultFunc(parseInt(x));
-                document.getElementById("resultDiv").innerHTML = resultString;
+                document.getElementById("resultDiv").innerHTML = "Result: " + resultFunc(parseInt(x));
             }
         }
 
@@ -18,18 +17,18 @@
             let x = document.getElementById("inputNum1").value;
             let y = document.getElementById("inputNum2").value;
             if (!isNaN(x) && !isNaN(y)) {
-                let resultString = "Result: " + resultFunc(parseInt(x), parseInt(y));
-                document.getElementById("resultDiv").innerHTML = resultString;
+                document.getElementById("resultDiv").innerHTML = "Result: " + resultFunc(parseInt(x), parseInt(y));
             }
         }
+
         // three different methods of declaring functions are demonstrated
-        const add = (x, y) => x + y;
+        function add(x, y) {
+            return x + y;
+        }
         const subtract = function (x, y) {
             return x - y;
         };
-        function multiply(x, y) {
-            return x * y;
-        }
+        const multiply = (x, y) => x * y;
         const nthTriangleNumber = n => (n * (n + 1)) / 2;
 
     </script>
