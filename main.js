@@ -13,8 +13,12 @@ export const weeks = [
     [
         //Week 2
         {
-            label: "Calculator Exercise",
+            label: "Calculator Team Exercise",
             path: "exercises_and_notes/week_02/calculator_exercise.html",
+        },
+        {
+            label: "Superhero Quiz",
+            path: "exercises_and_notes/week_02/superhero_quiz_exercise/quiz.html",
         }
     ],
     [
