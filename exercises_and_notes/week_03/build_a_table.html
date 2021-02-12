@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mountains Exercise</title>
+</head>
+
+<body>
+
+<h1>Mountains</h1>
+
+<div id="mountains"></div>
+
+<script>
+    const MOUNTAINS = [
+        {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+        {name: "Everest", height: 8848, place: "Nepal"},
+        {name: "Mount Fuji", height: 3776, place: "Japan"},
+        {name: "Vaalserberg", height: 323, place: "Netherlands"},
+        {name: "Denali", height: 6168, place: "United States"},
+        {name: "Popocatepetl", height: 5465, place: "Mexico"},
+        {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+    ];
+
+    function buildTableHtml(data) {
+        let html = ``;
+        if (!(data instanceof Array)) {
+            return html;
+        }
+        html += `<table>`;
+        //header row with property names as column names
+        html += buildRowHtml(data[0], true);
+        for (let i = 0, length = data.length; i < length; i++) {
+            html += buildRowHtml(data[i]);
+        }
+        html += `</table>`;
+        return html;
+    }
+
+    function buildRowHtml(row, header = false) {
+        let html = `<tr>`;
+        for (const key in row) {
+            if (row.hasOwnProperty(key)) {
+                html += header ? `<th>${key}</th>` : `<td>${row[key]}</td>`;
+            }
+        }
+        html += `</tr>`;
+        return html;
+    }
+
+    document.getElementById("mountains").innerHTML = buildTableHtml(MOUNTAINS);
+
+
+</script>
+</body>
+</html>
