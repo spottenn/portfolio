@@ -23,6 +23,14 @@ export const weeks = [
     ],
     [
         //Week 3
+        {
+            label: "Build Table Exercise",
+            path: "exercises_and_notes/week_03/build_a_table.html",
+        },
+        {
+            label: "Balloon Exercise",
+            path: "exercises_and_notes/week_03/build_a_table.html",
+        }
     ],
     [
         //Week 4

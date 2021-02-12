@@ -8,8 +8,7 @@ window.onload = function () {
 
     function runGame() {
         for (const [question, answer] of quiz) {
-            let response = prompt(question);
-            checkAnswer(response, answer);
+            checkAnswer(prompt(question), answer);
         }
         showScore();
     }
