@@ -29,7 +29,7 @@ export const weeks = [
         },
         {
             label: "Balloon Exercise",
-            path: "exercises_and_notes/week_03/build_a_table.html",
+            path: "exercises_and_notes/week_03/balloon_exercise.html",
         }
     ],
     [
