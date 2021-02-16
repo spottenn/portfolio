@@ -25,13 +25,25 @@ window.addEventListener('load', () => {
 
 
     //filter all
-    filterAllBtn.addEventListener('click', () => displayToDos.renderTaskList(taskListDiv));
+    filterAllBtn.addEventListener('click', handleFilter);
     //filter active
-    filterActiveBtn.addEventListener('click', () => {
-        displayToDos.renderTaskList(taskListDiv, toDoApp.getActiveTasks())
-    });
+    filterActiveBtn.addEventListener('click', handleFilter);
     //filter completed
-    filterCompletedBtn.addEventListener('click', () => {
-        displayToDos.renderTaskList(taskListDiv, toDoApp.getCompletedTasks());
-    });
+    filterCompletedBtn.addEventListener('click', handleFilter);
+    function handleFilter() {
+        if(this === filterActiveBtn) {
+            displayToDos.renderTaskList(taskListDiv, toDoApp.getActiveTasks());
+        } else if (this === filterCompletedBtn) {
+            displayToDos.renderTaskList(taskListDiv, toDoApp.getCompletedTasks());
+        } else {
+            displayToDos.renderTaskList(taskListDiv);
+        }
+        removeFilterBtnHighlight();
+        this.classList.add('highlighted');
+    }
+    function removeFilterBtnHighlight() {
+        filterCompletedBtn.classList.remove('highlighted');
+        filterAllBtn.classList.remove('highlighted');
+        filterActiveBtn.classList.remove('highlighted');
+    }
 });

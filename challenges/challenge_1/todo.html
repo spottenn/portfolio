@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>To-Dos</title>
+    <link rel="stylesheet" type="text/css" href="todo.css">
     <script src="todo.js" type="module"></script>
 </head>
 <body>
-<div id="header">To-Dos</div>
-<div id="tasks_div">
-    <div id="task_list"></div>
-    <div id="filter_bar">
-        <span id="tasks_remaining">0 tasks remaining</span>
-        <button id="filter_all" class="highlighted">All</button>
-        <button id="filter_active">Active</button>
-        <button id="filter_completed">Completed</button>
+<div class="container">
+    <div id="header" class="span2">To-Dos</div>
+    <div id="task_area" class="span2">
+        <div id="task_list" class="span3"></div>
+        <div id="filter_bar">
+            <span id="tasks_remaining">0 tasks remaining</span>
+            <button id="filter_all" class="highlighted">All</button>
+            <button id="filter_active">Active</button>
+            <button id="filter_completed">Completed</button>
+        </div>
     </div>
-</div>
-<div id="new_task_div">
-    <input id="new_task_title"type="text">
-    <button id="add_task" class="highlighted">+</button>
+    <input id="new_task_title" class="bottom" type="text">
+    <button id="add_task" class="highlighted bottom">+</button>
 </div>
 </body>
 </html>

@@ -31,13 +31,15 @@ function addListEventListeners(toDoApp) {
     }
 
     function setCompleted() {
-        toDoApp.setCompleted(Number(this.parentElement.id), Boolean(this.checked));
+        let parent = this.parentElement;
+        toDoApp.setCompleted(Number(parent.id), Boolean(this.checked));
+        this.checked ? parent.classList.add('completed') : parent.classList.remove('completed');
         showTasksRemaining(toDoApp);
     }
 }
 
 function buildTaskHtml(task) {
-    let html = `<div id="${task.id}">
+    let html = `<div id="${task.id}" class="task${task.completed ? ' completed' : ''}">
 <input class="task_completed" type="checkbox" ${task.completed ? 'checked' : ''}>${task.title}
 <button class="remove_button">x</button>
 </div>`;
