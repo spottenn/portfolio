@@ -40,7 +40,13 @@ export const weeks = [
         {
             label: "Lint Exercise",
             path: "exercises_and_notes/week_05/lint_exercise.html",
-            week: 5
+        }
+    ],
+    [
+        //week 6
+        {
+            label: "Challenge 1: To-Do SPA",
+            path: "challenges/challenge_1/todo.html",
         }
     ]
 ];
