@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            border: 1px dotted black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="200" height="200">
+</canvas>
+<script>
+    let canvasElem = document.getElementById('canvas');
+    let context = canvasElem.getContext('2d');
+    context.fillStyle = 'rgba(117, 231, 239, 1)';
+    context.strokeStyle = 'rgba(50, 50, 50, 1)'
+    context.fillRect(10, 10, 120, 100);
+    context.strokeRect(10, 10, 120, 100);
+    //write hi
+    context.fillStyle = 'rgb(176,32,32, 0.7)';
+    context.fillRect(20, 20, 8, 60);
+    context.fillRect(40, 20, 8, 60);
+    context.fillRect(28, 46, 12, 8);
+    context.fillRect(60, 46, 8, 34);
+    drawCircle(context, 64, 36, 4, 'rgb(176,32,32, 0.7)');
+    drawCircle(context, 130, 134, 60, 'rgb(14,56,181, 0.4)');
+
+    function drawCircle(context, x, y , r, fillStyle) {
+        context.beginPath();
+        context.arc(x, y, r, 0, Math.PI*2, true);
+        context.closePath();
+        context.fillStyle = fillStyle;
+        context.fill();
+    }
+
+</script>
+</body>
+</html>
