@@ -59,6 +59,17 @@ export const weeks = [
             label: 'HTTP and Forms Exercises',
             path: 'exercises_and_notes/week_07/http_and_forms_exercises.html',
         }
+    ],
+    [
+        //week 8
+        {
+            label: 'Clock Exercise',
+            path: 'exercises_and_notes/week_08/clock_exercise.html',
+        },
+        {
+            label: 'Canvas Exercise',
+            path: 'exercises_and_notes/week_08/canvas_exercise.html',
+        }
     ]
 ];
 
