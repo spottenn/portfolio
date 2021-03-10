@@ -70,6 +70,17 @@ export const weeks = [
             label: 'Canvas Exercise',
             path: 'exercises_and_notes/week_08/canvas_exercise.html',
         }
+    ],
+    [
+        //week 7
+        {
+            label: 'Managing the Modern Front-end Workflow',
+            path: 'exercises_and_notes/week_09/front_end_workflow_exercise.html',
+        },
+        {
+            label: 'Window Object Exercise',
+            path: 'exercises_and_notes/week_09/window_object_exercise_start.html',
+        }
     ]
 ];
 

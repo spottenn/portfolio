@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window Object Exercise</title>
+</head>
+<body>
+<h1>Demo of moving the browser window using JavaScript</h1>
+<p>Make sure you allow the popup from this page.</p>
+<br>
+<p>While completing this exercise I read and realized that is an example of poor user experience design. I apologize for that,
+but it does showcase the abilities to work with the window object, look up documentation for web technologies,
+and learn from them.</p>
+<button onclick="openDemo();">open demo window</button>
+<button onclick="closeDemo();">close demo window</button>
+<script>
+    let demoWindow = null;
+    function closeDemo() {
+        demoWindow.close();
+        demoWindow = null;
+    }
+    function openDemo() {
+        if(demoWindow) {
+            demoWindow.close();
+        }
+        demoWindow = window.open('./window_object_exercise.html', 'Window Object Exercise', `resizable=yes`);
+    }
+
+</script>
+</body>
+</html>

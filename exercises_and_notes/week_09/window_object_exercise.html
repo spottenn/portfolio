@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window Object Exercise</title>
+</head>
+<body>
+<p>This is a demo of moving the browser window using JavaScript.</p>
+
+<script>
+
+    let screenX = window.screen.availWidth, screenY = window.screen.availHeight;
+    let currentX = 0, currentY = 0;
+    const xIteration = 5, yIterations = 5;
+    const duration = 1000;
+    const windowX = screenX / xIteration, windowY = screenY / yIterations;
+    function myResize() {
+        currentX += screenX / xIteration;
+        if (currentX + windowX >  screenX) {
+            currentX = 0;
+            currentY += screenY / yIterations;
+            if (currentY + windowY >  screenY) {
+                currentY = 0;
+            }
+            
+        }
+        window.moveTo(currentX, currentY);
+    }
+    window.resizeTo(windowX, windowY);
+    setInterval(myResize, duration);
+</script>
+</body>
+</html>
