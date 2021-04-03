@@ -1,1 +1,65 @@
+<div id="scroll_hint_top_div" class="scroll_hint_div"><div id="scroll_hint_top "><h3>Look here to scroll</h3></div></div>
+<div id="scroll_hint_right_div" class="scroll_hint_div">
+    <div id="scroll_hint_right">
+        <h2>Not Working?</h2>
+        <p>Continue clicking and following the mouse with your eyes to improve calibration.</p>
+    </div>
+</div>
 <div id="article_div">Loading Article</div>
+<div id="scroll_hint_bottom_div" class="scroll_hint_div"><div id="scroll_hint_bottom "><h3>Look here to scroll</h3></div></div>
+<style>
+    .scroll_hint_div{
+        position: fixed;
+        z-index: 1;
+        background-color: rgba(103, 103, 103, 0.3);
+        right: 0;
+        margin: 0;
+        left: 0;
+        box-sizing: border-box;
+        /*text-align: center;*/
+    }
+    .scroll_hint_div div {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        block-size: fit-content;
+        background-color: white;
+    }
+
+    #scroll_hint_top_div {
+        left: 320px;
+        width: initial;
+        right: 0;
+        top: 0;
+    }
+    #scroll_hint_bottom_div {
+        bottom: 0;
+    }
+    #scroll_hint_right_div {
+        padding-left: 16px;
+        padding-right: 16px;
+        top: 240px;
+        width: 320px;
+    }
+    #scroll_hint_top {
+    }
+    #scroll_hint_bottom {
+
+    }
+    #scroll_hint_right {
+
+    }
+    body {
+        margin: 0;
+    }
+
+    #title {
+        padding-top: 60px;
+    }
+    #ui_steps_content {
+        padding-bottom: 80px;
+    }
+    #webgazerFaceOverlay {
+        z-index: 2;
+    }
+</style>

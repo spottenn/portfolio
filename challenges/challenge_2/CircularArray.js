@@ -3,18 +3,24 @@ export default class CircularArray {
         this.array = [];
         this.size = size;
         this.index = 0;
+        this.lastIndex = null;
     }
+
     push(value) {
-        this.index++;
-        if (this.index > this.size) {
+        this.lastIndex = this.index;
+        this.array[this.index++] = value;
+        if (this.index >= this.size) {
             this.index = 0;
         }
-        this.array[this.index] = value;
+        //the same way as a one-liner
+        this.index < this.size ? this.array[this.lastIndex = this.index++] =  value : this.array[this.index = 0] = value;
     }
+
     getArray() {
         return this.array;
     }
+
     getLastItem() {
-        return this.array[this.index];
+        return this.lastIndex !== null ? this.array[this.lastIndex] : null;
     }
 }

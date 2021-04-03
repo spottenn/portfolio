@@ -1,4 +1,31 @@
-#content {
-    margin-left: 400px;
+html, body, #right_section {
+    min-height: 100%;
 }
-/*todo: need hover for search results*/
+body {
+    margin: 0;
+}
+#left_div {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    border-right: black 2px solid;
+}
+#right_section {
+    margin-left: 320px;
+    margin-right: 0;
+}
+.right {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#title {
+    margin-top: 0;
+    padding-top: 20px;
+    border-bottom: black 2px solid;
+    background-color: lightblue;
+}
+#ui_steps_content {
+    padding-bottom: 20px;
+}

@@ -1,36 +1,36 @@
 export default class WikipediaHelper {
     constructor() {
         this.storedQuery = '';
-        this.storedArticleId = '';
+        this.storedarticleTitle = '';
         // this.lastSearchResults = {};
     }
     async getSearchResultsHtmlList (query = this.storedQuery) {
         if (!query || query === '') {
-            return ''; //todo handle error
+            return 'no query entered';
         }
         let url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${query}&format=json&formatversion=2&origin=*`
         let results = await getJSON(url);
-        let html = '<ul>';
-        results.query.search.forEach(item => {
-            html += `<li data-id="${item.pageid}"><strong data-id="${item.pageid}">${item.title}</strong>...${item.snippet}...</li>`
-        })
-        html += '</ul>';
-        //todo: add no results case
-        //todo: handle style element
-        //todo: finish
-        //needs to return prebuilt html with dataset article id attributes
+        let html = '';
+        if (results && results.query && results.query.search && results.query.search.length) {
+            results.query.search.forEach(item => {
+                html += `<p><span class="result_title" data-title="${item.title}">${item.title}</span>: ${item.snippet}...</p>`
+            })
+        } else {
+            html += '<p>no results found</p>'
+        }
         this.storedQuery = query;
         return html;
     }
-    async getArticle(articleId = this.storedArticleId) {
-        if (!articleId || articleId === '') {
-            return ''; //todo handle error
+    async getArticle(articleTitle = this.storedarticleTitle) {
+        if (!articleTitle || articleTitle === '') {
+            return '<p>There was an error. You can hitting the browser back button</p>';
         }
-        //todo: remove links?
-        // let url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&pageid=24768&prop=text&formatversion=2&origin=*`
-        let url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&pageid=${articleId}&prop=text&formatversion=2&origin=*`
+        let url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&page=${articleTitle}&redirects=1&prop=text&formatversion=2&origin=*`
         let result = await getJSON(url);
-        return result.parse.text;
+        if(result && result.parse && result.parse.title && result.parse.text) {
+            return `<h2>${result.parse.title}</h2>${result.parse.text}`;
+        }
+        return '<p>There was an error. You can hitting the browser back button</p>'
     }
 }
 function getJSON(url){
