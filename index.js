@@ -3,14 +3,14 @@ import { weeks } from './main.js';
 function populateListHtml () {
     const linkListElement = document.getElementById("links");
     let listHtml = "";
-    for (const week of weeks) {
-        listHtml += "<li><ul>"
-        if (week.length) {
-            for (const link of week) {
+    for (let i = 0; i < weeks.length; i++) {
+        listHtml += `<li><ul>`;
+        if (weeks[i].length) {
+            for (const link of weeks[i]) {
                 listHtml += `<li><a href='${link.path}'>${link.label}</a></li>`;
             }
         } else {
-            listHtml += '<pre> </pre>'
+            listHtml += '<li></li>'
         }
         listHtml += "</ul></li>"
     }

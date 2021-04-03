@@ -72,7 +72,7 @@ export const weeks = [
         }
     ],
     [
-        //week 7
+        //week 9
         {
             label: 'Managing the Modern Front-end Workflow',
             path: 'exercises_and_notes/week_09/front_end_workflow_exercise.html',
@@ -80,6 +80,13 @@ export const weeks = [
         {
             label: 'Window Object Exercise',
             path: 'exercises_and_notes/week_09/window_object_exercise_start.html',
+        }
+    ],
+    [
+        //week 9
+        {
+            label: 'Challenge 2: Gaze Automatic Scrolling Demo',
+            path: 'challenges/challenge_2/ai_scroll.html',
         }
     ]
 ];

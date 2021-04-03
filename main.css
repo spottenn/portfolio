@@ -21,6 +21,15 @@ nav hr {
     margin: 0 0 8px 0;
 }
 
+ol {
+    background-color: #174c6b;
+    /*list-style-type: none;*/
+}
+
+ol > li {
+    border-bottom: #231651 2px solid;
+}
+
 ul {
     list-style-type: none;
     background-color: #174c6b;
@@ -107,37 +116,4 @@ a:hover {
 
 a:active {
     color: #d6fff6;
-}
-
-.icon {
-    height: 16px;
-    width: 16px;
-}
-
-.button {
-    padding: 8px;
-    width: 150px;
-}
-
-#img-link {
-    filter: invert(100%);
-}
-
-#form-box {
-    margin-right: auto;
-    margin-left: auto;
-    /*width: 600px;*/
-}
-
-#submit {
-    margin-right: 8px;
-
-}
-
-#radio, #checkbox {
-    margin: 16px 0 16px;
-}
-
-#other {
-    margin-top: 16px;
 }
