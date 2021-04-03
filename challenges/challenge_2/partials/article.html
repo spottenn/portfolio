@@ -1,5 +1,5 @@
 <div id="scroll_hint_top_div" class="scroll_hint_div"><div id="scroll_hint_top "><h3>Look here to scroll</h3></div></div>
-<div id="scroll_hint_right_div" class="scroll_hint_div">
+<div id="scroll_hint_left_div" class="scroll_hint_div">
     <div id="scroll_hint_right">
         <h2>Not Working?</h2>
         <p>Continue clicking and following the mouse with your eyes to improve calibration.</p>
@@ -16,14 +16,13 @@
         margin: 0;
         left: 0;
         box-sizing: border-box;
-        /*text-align: center;*/
     }
     .scroll_hint_div div {
         margin-left: auto;
         margin-right: auto;
         width: fit-content;
         block-size: fit-content;
-        background-color: white;
+        background-color: #231651;
     }
 
     #scroll_hint_top_div {
@@ -35,9 +34,10 @@
     #scroll_hint_bottom_div {
         bottom: 0;
     }
-    #scroll_hint_right_div {
+    #scroll_hint_left_div {
         padding-left: 16px;
         padding-right: 16px;
+        color: #ff8484;
         top: 240px;
         width: 320px;
     }
@@ -52,7 +52,10 @@
     body {
         margin: 0;
     }
-
+    #article_div {
+        background-color: white;
+        color: black;
+    }
     #title {
         padding-top: 60px;
     }

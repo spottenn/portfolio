@@ -1,143 +1,94 @@
-body {
+body.ai_scroll {
     font-family: Verdana, Arial, sans-serif;
     color: lightcyan;
-    /*text-align: center;*/
     background-color: #231651;
     margin: 0;
 }
-
-nav {
+nav.ai_scroll {
     top: 0;
     position: sticky;
     position: -webkit-sticky;
 }
-
-nav a {
+nav.ai_scroll a.ai_scroll {
     font-weight: bold;
     text-decoration: none;
 }
-
-nav hr {
+nav.ai_scroll hr.ai_scroll {
     margin: 0 0 8px 0;
 }
-
-ul {
+ul.ai_scroll {
     list-style-type: none;
     background-color: #174c6b;
     color: #4dccbd;
     padding: 8px 0 8px;
     margin: 0;
 }
-
-ul li {
+ul.ai_scroll li.ai_scroll {
     padding: 8px 16px;
     display: inline;
 }
-
-
-header hr {
+header.ai_scroll hr.ai_scroll {
     margin: 0;
 }
-
-h3 {
+h3.ai_scroll {
     color: #ff8484;
 }
-
-p {
+p.ai_scroll {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
-
-h2 {
+h2.ai_scroll {
     font-weight: lighter;
 }
-table, tr, th, td {
+table.ai_scroll, tr.ai_scroll, th.ai_scroll, td.ai_scroll {
     border: 1px solid #4dccbd;
     border-collapse: collapse;
 }
-
-th {
+th.ai_scroll {
     padding: 8px;
 }
-
-td {
+td.ai_scroll {
     padding: 4px;
 }
-
-
-section {
+section.ai_scroll {
     background-color: #174c6b;
     margin: 30px 0 30px;
     padding: 8px;
 }
-
-form {
+form.ai_scroll {
     color: #d6fff6;
-    /*text-align:left;*/
 }
-
-select, option, input, textarea {
+select.ai_scroll, option.ai_scroll, input.ai_scroll, textarea.ai_scroll {
     background-color: #231651;
     color: #d6fff6;
     border: 2px solid #4dccbd;
     border-radius: 5px;
     margin: 8px 0 8px;
 }
-
-footer {
+footer.ai_scroll {
     font-size: 0.5em;
 }
-
-li a {
+li.ai_scroll a.ai_scroll {
     height: 20px;
 }
-
-a:link {
-    color: #d6fff6;
+a.ai_scroll:link {
+    color: #4ba4c8;
 }
-
-a:visited {
-    color: #d6fff6;
+a.ai_scroll:visited {
+    color: #505c9f;
 }
-
-a:hover {
+a.ai_scroll:hover {
     color: #ff8484;
 }
-
-a:active {
+a.ai_scroll:active {
     color: #d6fff6;
 }
-
-.icon {
+.ai_scroll.icon {
     height: 16px;
     width: 16px;
 }
-
-.button {
+.ai_scroll.button {
     padding: 8px;
     width: 150px;
-}
-
-#img-link {
-    filter: invert(100%);
-}
-
-#form-box {
-    margin-right: auto;
-    margin-left: auto;
-    /*width: 600px;*/
-}
-
-#submit {
-    margin-right: 8px;
-
-}
-
-#radio, #checkbox {
-    margin: 16px 0 16px;
-}
-
-#other {
-    margin-top: 16px;
 }

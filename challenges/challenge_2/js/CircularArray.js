@@ -13,7 +13,7 @@ export default class CircularArray {
             this.index = 0;
         }
         //the same way as a one-liner
-        this.index < this.size ? this.array[this.lastIndex = this.index++] =  value : this.array[this.index = 0] = value;
+        // this.index < this.size ? this.array[this.lastIndex = this.index++] =  value : this.array[this.index = 0] = value;
     }
 
     getArray() {

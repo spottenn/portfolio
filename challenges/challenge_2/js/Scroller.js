@@ -1,5 +1,4 @@
 import CircularArray from "./CircularArray.js";
-// const options = {};
 const ANALYSE_DELAY = 200;
 const SCROLL_DELAY = 1000;
 const SCROLL_SAMPLE_SETS = 6;
@@ -17,7 +16,7 @@ export default class Scroller {
         this.yPredictions = [];
         this.lastAnaliysedTime = 0;
         this.lastScrollTime = 0;
-        // GazeListener passed as anonymous function so that it will have the correct this.
+        // gazeListener passed as anonymous function so that it will have the correct this reference.
         // eslint-disable-next-line no-undef
         webgazer.setGazeListener((data, elapsedTime) => {
             if(!data || isNaN(elapsedTime)){
@@ -30,6 +29,9 @@ export default class Scroller {
                 this.lastAnaliysedTime = elapsedTime;
             }
         }).begin();
+        window.addEventListener('beforeunload', () => {
+            this.stop();
+        })
     }
     start() {
         this.enabled = true;

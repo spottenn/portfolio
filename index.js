@@ -5,8 +5,12 @@ function populateListHtml () {
     let listHtml = "";
     for (const week of weeks) {
         listHtml += "<li><ul>"
-        for(const link of week) {
-            listHtml += `<li><a href='${link.path}'>${link.label}</a></li>`;
+        if (week.length) {
+            for (const link of week) {
+                listHtml += `<li><a href='${link.path}'>${link.label}</a></li>`;
+            }
+        } else {
+            listHtml += '<pre> </pre>'
         }
         listHtml += "</ul></li>"
     }
