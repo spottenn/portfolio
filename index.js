@@ -1,13 +1,14 @@
-import { weeks } from './main.js';
+import {weeks} from './main.js';
 
-function populateListHtml () {
+function populateListHtml() {
     const linkListElement = document.getElementById("links");
     let listHtml = "";
     for (let i = 0; i < weeks.length; i++) {
         listHtml += `<li><ul>`;
         if (weeks[i].length) {
-            for (const link of weeks[i]) {
-                listHtml += `<li><a href='${link.path}'>${link.label}</a></li>`;
+            for (let j = 0; j < weeks[i].length; j++) {
+                listHtml +=
+                    `<li><a href='${weeks[i][j].path}'>${weeks[i][j].label}${j + 1 < weeks[i].length ? ',' : '' }</a></li>`;
             }
         } else {
             listHtml += '<li></li>'
