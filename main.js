@@ -85,7 +85,7 @@ export const weeks = [
     [
         //week 9
         {
-            label: 'Challenge 2: Gaze Automatic Scrolling Demo',
+            label: 'Challenge 2: Eye-tracking Automatic Scrolling Demo',
             path: 'challenges/challenge_2/ai_scroll.html',
         }
     ]
