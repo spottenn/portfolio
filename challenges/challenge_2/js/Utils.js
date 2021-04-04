@@ -41,3 +41,10 @@ export async function getJSON(url) {
         console.log('There was an error: ', error);
     }
 }
+export async function sleep(millis) {
+    return new Promise((resolve) =>{
+        setTimeout(()=> {
+            resolve();
+        }, millis)
+    })
+}

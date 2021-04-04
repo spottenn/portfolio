@@ -1,6 +1,6 @@
 import WikipediaHelper from "./WikipediaHelper.js";
 import Scroller from "./Scroller.js";
-import { fetchResults, applyStyleRecursive } from "./Utils.js";
+import { fetchResults, applyStyleRecursive, sleep} from "./Utils.js";
 
 const stepNamesInOrder = ['start', 'calibrate', 'search', 'results', 'article'];
 const scroller = new Scroller();
@@ -93,7 +93,11 @@ export default class UiSteps {
         });
     }
     async restoreStep(stepName) {
-        this.contentDiv.innerHTML = await fetchResults(`./partials/${stepName}.html`);
+        this.contentDiv.style.opacity = '0';
+        let html = fetchResults(`./partials/${stepName}.html`);
+        await sleep(300);
+        this.contentDiv.innerHTML = await html;
+        this.contentDiv.style.opacity = '100';
         applyStyleRecursive(this.contentDiv, 'ai_scroll');
         await this[stepName]();
     }

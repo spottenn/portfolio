@@ -30,3 +30,8 @@ body.ai_scroll {
 #ui_steps_content.ai_scroll {
     padding-bottom: 20px;
 }
+
+#ui_steps_content {
+    transition: opacity .3s;
+    opacity: 100;
+}
