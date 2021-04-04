@@ -3,11 +3,15 @@ import { getJSON } from "./Utils.js";
 export default class WikipediaHelper {
     constructor() {
         this.storedQuery = '';
+        this.storedResults = '';
         this.storedarticleTitle = '';
+        this.storedAticle = '';
     }
-    async getSearchResultsHtmlList (query = this.storedQuery) {
-        if (!query || query === '') {
+    async getSearchResultsHtmlList (query) {
+        if (!query) {
             return 'no query entered';
+        } else if (query === '' || query === this.storedQuery && this.storedResults) {
+            return this.storedResults;
         }
         let url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${query}&format=json&formatversion=2&origin=*`
         let results = await getJSON(url);
@@ -20,11 +24,14 @@ export default class WikipediaHelper {
             html += '<p>no results found</p>'
         }
         this.storedQuery = query;
+        this.storedResults = html;
         return html;
     }
-    async getArticle(articleTitle = this.storedarticleTitle) {
-        if (!articleTitle || articleTitle === '') {
-            return '<p>There was an error. You can hitting the browser back button</p>';
+    async getArticle(articleTitle) {
+        if (!articleTitle) {
+            return 'There was an error. Try hitting the browser back button.';
+        } else if (articleTitle === '' || articleTitle === this.storedarticleTitle && this.storedAticle) {
+            return this.storedAticle;
         }
         let url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&page=${articleTitle}&redirects=1&prop=text&formatversion=2&origin=*`
         let result = await getJSON(url);

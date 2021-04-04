@@ -95,11 +95,11 @@ export default class UiSteps {
     async restoreStep(stepName) {
         this.contentDiv.style.opacity = '0';
         let html = fetchResults(`./partials/${stepName}.html`);
-        await sleep(300);
+        await sleep(200);
         this.contentDiv.innerHTML = await html;
-        this.contentDiv.style.opacity = '100';
         applyStyleRecursive(this.contentDiv, 'ai_scroll');
         await this[stepName]();
+        this.contentDiv.style.opacity = '100';
     }
     async startStep(newStepInt) {
         let stepName = stepNamesInOrder[newStepInt];
